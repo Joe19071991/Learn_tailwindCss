@@ -19,7 +19,7 @@
       class="w-full bg-zinc-100 h-screen flex justify-center items-center flex-col"
     >
       <div
-        class="bg-zinc-50 flex flex-col gap-6 justify-start max-w-sm lg:max-w-md w-full text-zinc-950 rounded-2xl shadow-lg p-9 border border-zinc-300"
+        class="group flex flex-col gap-6 justify-start max-w-sm lg:max-w-md w-full text-zinc-950 rounded-2xl shadow-lg p-9 bg-zinc-50 border border-zinc-300 dark:bg-zinc-950 dark:text-zinc-100"
       >
         <div>
           <h1 class="font-bold text-2xl">Hello</h1>
@@ -33,11 +33,32 @@
 
         <!-- responsive avec grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3, de base il est en colonne de 1 puis en md on passe en 2 colonnes et en lg on passe à 3, ici mobile first de base on commence par le mobile first-->
 
-        <ul class="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <li class="bg-zinc-200 px-4 py-2 rounded-md">Oeuf</li>
-          <li class="bg-zinc-200 px-4 py-2 rounded-md">Fromage</li>
-          <li class="bg-zinc-200 px-4 py-2 rounded-md">Pain</li>
-          <li class="bg-zinc-200 px-4 py-2 rounded-md">Beurre</li>
+        <ul class="grid gap-2 p-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <li
+            class="group flex items-center justify-between gap-2 bg-zinc-200 rounded-md px-4 py-2 shadow"
+          >
+            Oeuf
+            <!-- le group ne fonctionne pas -->
+            <div class="opacity-0 transition-opacity group-hover:opacity-100">
+              =>
+            </div>
+          </li>
+
+          <li
+            class="group flex items-center justify-between gap-2 bg-zinc-200 rounded-md px-4 py-2 shadow"
+          >
+            Fromage
+          </li>
+          <li
+            class="group flex items-center justify-between gap-2 bg-zinc-200 rounded-md px-4 py-2 shadow"
+          >
+            Pain
+          </li>
+          <li
+            class="group flex items-center justify-between gap-2 bg-zinc-200 rounded-md px-4 py-2 shadow"
+          >
+            Beurre
+          </li>
         </ul>
         <!-- max lg veut dire tout ce qui vient avant lg et lg:flex-col signifie tout ce qui est après lg -->
         <div class="flex-col flex gap-2 lg:flex-row">
