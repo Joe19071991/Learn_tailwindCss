@@ -8,7 +8,7 @@
     <title>Vite + React</title>
   </head>
   <body>
-    <!-- responsive -->
+    <!-- responsive avec span aide à savoir ou on en est dans l'espace du web-->
     <div class="absolute bottom-4 left-4">
       <span class="sm:hidden">XS</span>
       <span class="hidden sm:block md:hidden">SM</span>
@@ -31,17 +31,27 @@
           </p>
         </div>
 
-        <ul class="flex flex-col gap-2">
+        <!-- responsive avec grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3, de base il est en colonne de 1 puis en md on passe en 2 colonnes et en lg on passe à 3, ici mobile first de base on commence par le mobile first-->
+
+        <ul class="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <li class="bg-zinc-200 px-4 py-2 rounded-md">Oeuf</li>
           <li class="bg-zinc-200 px-4 py-2 rounded-md">Fromage</li>
           <li class="bg-zinc-200 px-4 py-2 rounded-md">Pain</li>
           <li class="bg-zinc-200 px-4 py-2 rounded-md">Beurre</li>
         </ul>
-        <button
-          class="rounded-md uppercase font-bold bg-purple-500 hover:bg-purple-600 focus:ring-2 ring-purple-300 shadow-sm px-4 py-2 text-white focus:outline-none ring-offset-2 active:bg-purple-600/90"
-        >
-          Click me
-        </button>
+        <!-- max lg veut dire tout ce qui vient avant lg et lg:flex-col signifie tout ce qui est après lg -->
+        <div class="flex-col flex gap-2 lg:flex-row">
+          <button
+            class="rounded-md uppercase font-bold bg-purple-500 hover:bg-purple-600 focus:ring-2 ring-purple-300 shadow-sm px-4 py-2 text-white focus:outline-none ring-offset-2 active:bg-purple-600/90"
+          >
+            Click me
+          </button>
+          <button
+            class="rounded-md uppercase font-bold bg-green-500 hover:bg-green-600 focus:ring-2 green-300 shadow-sm px-4 py-2 text-white focus:outline-none ring-offset-2 active:bg-green-600/90"
+          >
+            Click me
+          </button>
+        </div>
       </div>
     </main>
     <div id="root"></div>
