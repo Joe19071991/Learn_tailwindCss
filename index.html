@@ -8,11 +8,18 @@
     <title>Vite + React</title>
   </head>
   <body>
+    <!-- responsive -->
+    <div class="absolute bottom-4 left-4">
+      <span class="sm:hidden">XS</span>
+      <span class="hidden sm:block md:hidden">SM</span>
+      <span class="hidden md:block lg:hidden">MD</span>
+      <span class="hidden lg:block xl:hidden">LG</span>
+    </div>
     <main
       class="w-full bg-zinc-100 h-screen flex justify-center items-center flex-col"
     >
       <div
-        class="bg-zinc-50 flex flex-col gap-6 justify-start max-w-sm w-full text-zinc-950 rounded-2xl shadow-lg p-9 border border-zinc-300"
+        class="bg-zinc-50 flex flex-col gap-6 justify-start max-w-sm lg:max-w-md w-full text-zinc-950 rounded-2xl shadow-lg p-9 border border-zinc-300"
       >
         <div>
           <h1 class="font-bold text-2xl">Hello</h1>
